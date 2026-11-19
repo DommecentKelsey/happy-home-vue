@@ -1,0 +1,94 @@
+/* Text styles from the Figma Design System. Desktop sizes by default, mobile below 600px. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Inter Variable', 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 0;
+}
+
+.text-brand {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.text-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.text-digit {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.text-button {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.text-message {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.text-caption {
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@media (max-width: 599.98px) {
+  .text-title {
+    font-size: 18px;
+  }
+
+  .text-button {
+    font-size: 14px;
+  }
+
+  .text-message {
+    font-size: 12px;
+  }
+
+  .text-caption {
+    font-size: 11px;
+  }
+}
+
+/* Visually hidden but available to assistive technology. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}

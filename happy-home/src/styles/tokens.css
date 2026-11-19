@@ -1,0 +1,131 @@
+/*
+ * Theme tokens. Names and values mirror the Figma "Theme" variable collection
+ * (modes: Light, Dark, High contrast); each variable's WEB code syntax is var(--color-<name>).
+ *
+ * Order matters: dark follows the system, high contrast comes last so it wins over dark.
+ * The [data-theme] selectors force a theme (tests, previews, a future manual switcher).
+ */
+
+:root {
+  color-scheme: light;
+  --color-bg: #0f0081;
+  --color-on-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-border: #ffffff;
+  --color-text: #000000;
+  --color-text-muted: #707070;
+  --color-icon-muted: #808080;
+  --color-box: #f6f6f6;
+  --color-box-border: #f6f6f6;
+  --color-primary: #3014ff;
+  --color-primary-disabled: #0f0081;
+  --color-on-primary: #ffffff;
+  --color-error: #db2626;
+  --color-error-bg: #fff0f0;
+  --color-warning: #b45309;
+  --color-focus: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --color-bg: #0b0a1f;
+    --color-on-bg: #ffffff;
+    --color-surface: #1b1a33;
+    --color-surface-border: #2c2a4d;
+    --color-text: #ffffff;
+    --color-text-muted: #8c8aa8;
+    --color-icon-muted: #a09ebd;
+    --color-box: #26244a;
+    --color-box-border: #26244a;
+    --color-primary: #5b47ff;
+    --color-primary-disabled: #2c2a4d;
+    --color-on-primary: #ffffff;
+    --color-error: #ff6b6b;
+    --color-error-bg: #3a1c2a;
+    --color-warning: #fbbf24;
+    --color-focus: #a99fff;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    color-scheme: dark;
+    --color-bg: #000000;
+    --color-on-bg: #ffffff;
+    --color-surface: #000000;
+    --color-surface-border: #ffffff;
+    --color-text: #ffffff;
+    --color-text-muted: #ffffff;
+    --color-icon-muted: #ffffff;
+    --color-box: #000000;
+    --color-box-border: #ffffff;
+    --color-primary: #ffe500;
+    --color-primary-disabled: #ffe500;
+    --color-on-primary: #000000;
+    --color-error: #ff6b6b;
+    --color-error-bg: #000000;
+    --color-warning: #ffe500;
+    --color-focus: #ffffff;
+  }
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --color-bg: #0f0081;
+  --color-on-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-border: #ffffff;
+  --color-text: #000000;
+  --color-text-muted: #707070;
+  --color-icon-muted: #808080;
+  --color-box: #f6f6f6;
+  --color-box-border: #f6f6f6;
+  --color-primary: #3014ff;
+  --color-primary-disabled: #0f0081;
+  --color-on-primary: #ffffff;
+  --color-error: #db2626;
+  --color-error-bg: #fff0f0;
+  --color-warning: #b45309;
+  --color-focus: #000000;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --color-bg: #0b0a1f;
+  --color-on-bg: #ffffff;
+  --color-surface: #1b1a33;
+  --color-surface-border: #2c2a4d;
+  --color-text: #ffffff;
+  --color-text-muted: #8c8aa8;
+  --color-icon-muted: #a09ebd;
+  --color-box: #26244a;
+  --color-box-border: #26244a;
+  --color-primary: #5b47ff;
+  --color-primary-disabled: #2c2a4d;
+  --color-on-primary: #ffffff;
+  --color-error: #ff6b6b;
+  --color-error-bg: #3a1c2a;
+  --color-warning: #fbbf24;
+  --color-focus: #a99fff;
+}
+
+:root[data-theme='high-contrast'] {
+  color-scheme: dark;
+  --color-bg: #000000;
+  --color-on-bg: #ffffff;
+  --color-surface: #000000;
+  --color-surface-border: #ffffff;
+  --color-text: #ffffff;
+  --color-text-muted: #ffffff;
+  --color-icon-muted: #ffffff;
+  --color-box: #000000;
+  --color-box-border: #ffffff;
+  --color-primary: #ffe500;
+  --color-primary-disabled: #ffe500;
+  --color-on-primary: #000000;
+  --color-error: #ff6b6b;
+  --color-error-bg: #000000;
+  --color-warning: #ffe500;
+  --color-focus: #ffffff;
+}
